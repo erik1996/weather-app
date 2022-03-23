@@ -1,0 +1,3 @@
+{
+  "extends": "@mvp-tech/lint-presets/stylelint"
+}

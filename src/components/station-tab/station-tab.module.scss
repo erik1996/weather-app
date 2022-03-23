@@ -1,0 +1,65 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.stationHeader {
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding-right: 32px;
+}
+
+.stationHeaderNameColumn {
+  width: 166px;
+}
+
+.stationsList {
+  height: 73vh;
+  overflow-x: auto;
+  @include mobile {
+    height: 59vh;
+  }
+}
+
+.addStationForm {
+  margin-bottom: 16px;
+}
+
+.addStationInput {
+  background: none;
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: $white;
+  width: 100%;
+  color: $white;
+  height: 36px;
+  padding: 0 4px;
+}
+
+.inputErrorState {
+  border-color: $red;
+}
+
+.nameInput {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.numberInput {
+  width: 23%;
+  margin-right: 5px;
+}
+
+.numberInputContainer {
+  display: flex;
+} 
+
+.addBtn {
+  background: none;
+  border: 1px solid $white;
+  color: $white;
+  height: 36px;
+  width: 25%;
+  border-radius: 5px;
+  margin-left: auto;
+}

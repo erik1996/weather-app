@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.forecastItemContainer {
+  display: flex;
+  align-items: center;
+  color: $white;
+  margin-bottom: 56px;
+}
+
+.forecastItemIcon {
+  width: 13%;
+  height: 35px;
+  path {
+    fill: $white;
+  }
+}
+
+.forecastItemDay {
+  display: block;
+  width: 29%;
+  font-size: 23px;
+}
+
+.description {
+  width: 25%;
+  text-align: center;
+}
+
+.temp {
+  width: 15%;
+  text-align: center;
+}

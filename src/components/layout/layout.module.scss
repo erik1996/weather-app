@@ -1,0 +1,124 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.layoutContainer {
+  display: flex;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include mobile {
+    display: block;
+  }
+}
+
+.leftSideContainer {
+  flex: 5 1 0;
+  position: relative;
+  @include mobile {
+    height: 15vh;
+    display: flex;
+  }
+}
+
+.leftContent {
+  display: flex;
+  position: absolute;
+  color: $white;
+  bottom: 20%;
+  left: 60px;
+  @include mobile {
+    position: initial;
+    margin: auto;
+  }
+}
+
+.leftContentInfo {
+  display: flex;
+  height: 80px;
+  @include tablet {
+    height: 60px;
+  }
+  @include tablet-portrait {
+
+    height: 40px;
+  }
+}
+
+.leftContentInfoIcon {
+  margin-left: auto;
+  margin-top: auto;
+  width: 80px;
+  height: 80px;
+  path {
+    fill: $white;
+  }
+  @include tablet {
+    width: 60px;
+    height: 60px;
+  }
+  @include tablet-portrait {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.leftContentDate {
+  font-size: 30px;
+  margin-top: 18px;
+  @include tablet {
+    font-size: 22.5px;
+  }
+  @include tablet-portrait {
+    font-size: 15px;
+  }
+}
+
+.temperature {
+  font-size: 130px;
+  margin-right: 30px;
+  font-weight: 400;
+  @include tablet {
+    font-size: 97.5px;
+  }
+  @include tablet-portrait {
+    font-size: 65px;
+  }
+}
+
+.cityName {
+  font-size: 82px;
+  @include tablet {
+    font-size: 61.5px;
+  }
+  @include tablet-portrait {
+    font-size: 42px;
+  }
+}
+
+.rightSideContainer {
+  flex: 2 1 0;
+  position: relative;
+  @media only screen and (max-width: 1600px) {
+    flex: 3 1 0;
+  }
+  @include tablet {
+    flex: 4 1 0;
+  }
+  @include tablet-portrait {
+    flex: 5 1 0;
+  }
+}
+
+.rightContent {
+  padding: 0 40px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: $primary-background;
+  backdrop-filter: blur(60px);
+  @include mobile {
+    padding: 0 10px;
+  }
+}

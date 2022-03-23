@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "./node_modules/@mvp-tech/lint-presets/eslint/index.js"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "**/*.stories.*"
+      ],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
+    }
+  ]
+}

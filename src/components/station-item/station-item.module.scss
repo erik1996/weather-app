@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.stationsItemContainer {
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.name {
+  width: 160px;
+}
