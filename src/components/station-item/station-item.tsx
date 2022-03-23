@@ -14,7 +14,7 @@ type Props = {
 
 export const StationItem: FC<Props> = ({ item }) => {
   const dispatch = useDispatch();
-  const [loading, setLoding] = useState(false);
+  const [loading, setLoading] = useState(false);
   return (
     <div className={clsx(styles.stationsItemContainer)}>
       <span className={clsx(styles.name)}>{item.name}</span>
@@ -24,7 +24,7 @@ export const StationItem: FC<Props> = ({ item }) => {
       {!loading ? (
         <SVG
           onClick={() => {
-            setLoding(true);
+            setLoading(true);
             dispatch(removeStations(item.id));
           }}
           src="/icons/delete.svg"
