@@ -14,6 +14,8 @@ export const addStations: ApiMethodDeclaration<ParamsData, ResponseData> = (
   data
 ) => ({
   url: `/stations?&appid=${API_KEY}`,
+  baseURL:
+    "https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/3.0",
   method: "POST",
   data: {
     ...data,

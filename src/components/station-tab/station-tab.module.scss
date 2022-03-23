@@ -1,6 +1,10 @@
 @import '../../styles/mixins';
 @import '../../styles/variables';
 
+.loadingImg {
+  width: 20px;
+}
+
 .stationHeader {
   color: $white;
   display: flex;
@@ -62,4 +66,7 @@
   width: 25%;
   border-radius: 5px;
   margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

@@ -34,9 +34,9 @@ export const removeStations = createAsyncThunk(
 
 export const addStations = createAsyncThunk(
   "stations/addStations",
-  async (data: StationsParamsData) => {
+  async (data: StationsParamsData, { dispatch }) => {
     const response = await api.stations.addStations(data);
-    // dispatch(fetchStations());
+    dispatch(fetchStations());
     return response.data;
   }
 );
@@ -65,23 +65,6 @@ const stationsSlice = createSlice({
         state.stations = action.payload;
       })
       .addCase(fetchStations.rejected, (state) => {
-        state.isFetching = false;
-        state.isError = true;
-      });
-    builder
-      .addCase(removeStations.pending, (state) => {
-        state.isFetching = true;
-        state.isError = false;
-      })
-      .addCase(removeStations.fulfilled, (state, action) => {
-        state.isFetching = false;
-
-        if (!action.payload) {
-          state.isError = true;
-        }
-        return;
-      })
-      .addCase(removeStations.rejected, (state) => {
         state.isFetching = false;
         state.isError = true;
       });

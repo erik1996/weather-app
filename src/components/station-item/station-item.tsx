@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import SVG from "react-inlinesvg";
 import { useDispatch } from "react-redux";
 import clsx from "clsx";
@@ -14,17 +14,24 @@ type Props = {
 
 export const StationItem: FC<Props> = ({ item }) => {
   const dispatch = useDispatch();
+  const [loading, setLoding] = useState(false);
   return (
     <div className={clsx(styles.stationsItemContainer)}>
       <span className={clsx(styles.name)}>{item.name}</span>
       <span>{item.latitude}</span>
       <span>{item.longitude}</span>
       <span>{item.altitude}</span>
-      <SVG
-        onClick={() => dispatch(removeStations(item.id))}
-        className={clsx(styles.searchIcon)}
-        src="/icons/delete.svg"
-      />
+      {!loading ? (
+        <SVG
+          onClick={() => {
+            setLoding(true);
+            dispatch(removeStations(item.id));
+          }}
+          src="/icons/delete.svg"
+        />
+      ) : (
+        <img className={clsx(styles.icon)} src="/images/small_loading.gif" />
+      )}
     </div>
   );
 };
