@@ -11,6 +11,7 @@ export const removeStations: ApiMethodDeclaration<ParamsData, ResponseData> = (
 ) => {
   return {
     url: `/stations/${id}?appid=${API_KEY}`,
+    //to avoid cors error
     baseURL:
       "https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/3.0",
     method: "DELETE",
